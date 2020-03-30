@@ -1,0 +1,1147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #b0914f;
+}
+
+
+/* Font */
+
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url(../Fonts/KaushanScript-Regular.otf);
+}
+
+/*  */
+.custom-container {
+    display: flex;
+}
+
+.navbar {
+    height: 100vh;
+    width: 220px;
+    border-right: 1px solid #eee;
+    transition: all .3s;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 66666;
+
+}
+
+.close-arrow,
+.open-arrow {
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    transition: .3s;
+    font-size: 18px;
+}
+
+.logo {
+    width: 219px;
+    height: 50px;
+    background-image: url(../img/rLogo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+    position: absolute;
+    top: 47px;
+    cursor: pointer;
+}
+
+.navbar-menu {
+
+    box-shadow: -3px 5px 12px #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-menu>li {
+
+    width: 110px;
+    height: 57px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #eee;
+    cursor: pointer;
+    transition: all linear .3s;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.navbar-menu>li>i {
+    font-size: 16px;
+}
+
+.navbar-menu>li>span {
+    font-size: 14px;
+}
+
+.navbar-menu>li:last-child {
+    border-color: transparent;
+    margin: 16px 0 0;
+}
+
+.nav-active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 20px;
+}
+
+.social-media>a {
+    color: #333;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+.social-media>a:hover {
+    color: var(--primary-color);
+}
+
+/* Home Slider */
+.slider {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    transition: .3s all;
+
+}
+
+.slider img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    transition: opacity 2.5s;
+    object-fit: cover;
+
+}
+
+/* Home Slider Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Slider Text */
+.slider-text {
+    position: absolute;
+    top: 45%;
+    margin-left: 8%;
+}
+
+.text-name {
+
+    text-transform: uppercase;
+    font-size: 55px;
+    color: white;
+
+}
+
+.typing {
+    font-size: 22px;
+    letter-spacing: 0.7px;
+    color: white;
+    height: 33px;
+    margin-bottom: 20px;
+}
+
+.portfolio {
+    color: #fff;
+    padding: 10px 34px;
+    font-size: 15px;
+    letter-spacing: 1.4px;
+    border-radius: 2px;
+    background: var(--primary-color);
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+}
+
+.portfolio:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.arrow-left,
+.arrow-right {
+    width: 45px;
+    height: 45px;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 48px;
+    font-size: 25px;
+    bottom: 8%;
+    cursor: pointer;
+}
+
+.arrow-left {
+
+    right: 235px;
+
+}
+
+.arrow-right {
+    right: 180px;
+
+}
+
+
+
+/* Burger */
+
+.burger,
+.close-burger {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 55555;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    display: none;
+    border: 1px solid var(--primary-color);
+}
+
+.burger div {
+    margin: 5px;
+    width: 25px;
+    height: 4px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    transition: 0.3s;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: 0.3s;
+}
+
+
+
+
+
+.burger-tranform {
+    transform: translateX(0%) !important;
+}
+
+
+
+
+/* About Page */
+.about {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+.title {
+    padding: 60px 70px;
+    transition: .3s all;
+    font-size: 42px;
+    position: relative;
+    margin-top: -9px;
+    font-family: 'Kaushan Script';
+}
+
+.title p::before {
+    content: 'ABOUT';
+    position: absolute;
+    color: #efefef;
+    z-index: -1;
+    left: 65px;
+    top: 75px;
+}
+
+.about-image img {
+    width: 85%;
+    height: 350px;
+    border-radius: 5px;
+    transition: 0.5s all;
+
+}
+
+.about-image {
+    left: -500px;
+    position: relative;
+    z-index: -1;
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+/* Animation About Image */
+@keyframes animation {
+    from {
+        left: -500px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+.acc-header {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.acc-header li {
+    text-align: center;
+    cursor: pointer;
+    transition: .3s all;
+    width: 100px;
+}
+
+.acc-header li i {
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.about-info {
+    padding: 30px 20px 0;
+}
+
+.first-info {
+    font-size: 14px;
+    color: #666;
+
+}
+
+.first-info-img {
+    height: 9vh;
+}
+
+/* Active Accardion Top*/
+.acc-active {
+    color: var(--primary-color);
+    border-top: 2px solid var(--primary-color) !important;
+}
+
+.second-info div {
+    padding: 6px 0;
+}
+
+.info-title {
+    max-width: 145px;
+    width: 100%;
+    display: inline-block;
+    font-size: 15px;
+
+}
+
+.second-btn {
+    color: #fff;
+    padding: 9px 25px;
+    font-size: 15px;
+    background-color: var(--primary-color);
+}
+
+.second-btn:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.progress {
+    height: 3px;
+    overflow: visible;
+    background-color: transparent;
+    margin-bottom: 17px;
+    position: relative;
+}
+
+.progress-text {
+    margin-bottom: 7px;
+    color: #333 !important;
+    font-size: 14px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-1 {
+    width: 85%;
+}
+
+.progress-2 {
+    width: 70%;
+}
+
+.progress-3 {
+    width: 60%;
+}
+
+.progress-4 {
+    width: 80%;
+}
+
+.progress-bar {
+    opacity: 1;
+    width: 85%;
+    background-color: var(--primary-color);
+}
+
+.progress-bar-2 {
+    width: 70%;
+    opacity: 1;
+    background-color: var(--primary-color);
+}
+
+.progress-bar-3 {
+    width: 60%;
+    opacity: 1;
+    background-color: var(--primary-color);
+}
+
+
+.progress-bar-4 {
+    width: 80%;
+    opacity: 1;
+    background-color: var(--primary-color);
+}
+
+/* Preloader */
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999000000;
+    background-image: url('../img/preloader.gif');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Services */
+.services {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+.title-services {
+    padding: 60px 70px;
+    transition: .3s all;
+    font-size: 42px;
+    position: relative;
+
+    font-family: 'Kaushan Script';
+}
+
+.title-services p::before {
+    content: "SERVICES";
+    position: absolute;
+    color: #efefef;
+    z-index: -1;
+    left: 65px;
+    top: 75px;
+}
+
+.services-content {
+    margin-bottom: 20px;
+}
+
+.services-content img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.services-content p {
+    font-size: 19px;
+}
+
+.services-content span {
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 0.3px;
+    margin-bottom: 15px;
+}
+
+.services-video {
+    background-image: url(../img/services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 140px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    transition: .5s all;
+    cursor: pointer;
+}
+
+.play-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Portfolio */
+.portfolio1 {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+.portfolio-title {
+    position: relative;
+    padding: 60px 70px;
+    font-family: 'Kaushan Script';
+    font-size: 42px;
+    color: #1e1e1e;
+}
+
+.portfolio-title p::before {
+    content: "PORTFOLIO";
+    position: absolute;
+    z-index: -1;
+    position: absolute;
+    color: #efefef;
+    left: 65px;
+    top: 75px;
+}
+
+.portfolio-header {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.portfolio-header li {
+    cursor: pointer;
+    padding: 5px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    border: 1px solid var(--primary-color);
+    margin-right: 15px;
+    margin-top: 10px;
+
+}
+
+.portfolio-header-active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.portfolio-body {
+    position: relative;
+    overflow: hidden !important;
+
+}
+
+.overlay-portfolio {
+    width: 100%;
+    height: 82%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    transition: .3s;
+}
+
+.portfolio-image {
+    margin-bottom: 50px;
+}
+
+.portfolio-image {
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.icon2-portfolio {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+}
+
+.portfolio-body img {
+    transition: transform .3s ease-out;
+}
+
+.portfolio-body:hover img {
+    transform: scale(1.2);
+    overflow: hidden;
+}
+
+.portfolio-body:hover .overlay-portfolio {
+    opacity: 1;
+}
+
+.portfolio-overlay-text p:first-child {
+    font-size: 34px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.portfolio-overlay-text p:nth-child(2) {
+    font-size: 17px;
+    color: white;
+    margin-left: 17px;
+    line-height: 0.6;
+}
+
+/* Modal Portfolio */
+.portfolio-modal {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #0b0b0bcc;
+    z-index: 99999999;
+    overflow: hidden !important;
+}
+
+.content-modal {
+    position: relative;
+}
+
+.content-modal img {
+    width: auto;
+    max-width: 100%;
+    max-height: 670px;
+    padding: 40px 0 40px;
+    margin: 0 auto;
+}
+
+.close-x {
+    position: absolute;
+    right: 15px;
+    color: rgb(168, 168, 168);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.close-x:hover {
+    color: white;
+}
+
+/*  Testimonials*/
+.testimonials {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+}
+
+.testimonials-title {
+    padding: 60px 70px;
+    transition: .3s all;
+    font-size: 42px;
+    position: relative;
+    margin-top: -9px;
+    font-family: 'Kaushan Script';
+}
+
+.testimonials-title p::before {
+    content: "TESTIMONIALS";
+    position: absolute;
+    z-index: -1;
+    position: absolute;
+    color: #efefef;
+    left: 65px;
+    top: 75px;
+}
+
+.testimonials-center {
+    margin-top: 50px;
+}
+
+.testimonials-img {
+    display: flex;
+    justify-content: center;
+}
+
+.imgs {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.img-1 {
+    left: 85px;
+    top: 20px;
+    background-image: url(../img/testim1.jpg);
+}
+
+.img-2 {
+    top: -40px;
+    left: 75px;
+    background-image: url(../img/testim2.jpg);
+}
+
+.img-3 {
+    top: -65px;
+    left: 105px;
+    background-image: url(../img/testim3.jpg);
+    border: 2px solid var(--primary-color);
+}
+
+.img-4 {
+    top: -40px;
+    right: 30px;
+    background-image: url(../img/testim4.jpg);
+}
+
+.img-5 {
+    right: 40px;
+    top: 25px;
+    background-image: url(../img/testim5.jpg);
+}
+
+
+
+
+.big-img {
+    background-image: url(../img/testim3.jpg);
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: 160px;
+    min-width: 160px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+}
+
+.testimonials-text {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    height: 244px;
+    width: 50%;
+    height: 244px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: -79px;
+    left: 30px;
+
+}
+
+.quote-left {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    font-size: 23px;
+
+}
+
+.quote-right {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    font-size: 23px;
+
+}
+
+.testimonials-text p {
+
+    font-size: 15px;
+    padding-top: 10px;
+    margin: 85px 16% 15px;
+    color: #212529;
+    opacity: 0.8;
+}
+
+.testimonials-text span {
+    font-size: 19px;
+    font-weight: 600;
+    padding-top: 10px;
+    color: var(--primary-color);
+}
+
+.testimonials-bottom {
+    background-image: url(../img/background-client.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 144px;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
+
+.overlay-testimonials {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(176, 145, 79, 0.7);
+}
+
+.img-bottom-testimonials {
+    max-width: 60px;
+    margin-bottom: 20px;
+}
+
+.logos {
+    text-align: center;
+    padding: 40px;
+}
+
+
+/* Contact */
+
+.contact {
+    width: calc(100% - 220px) !important;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.contact-title {
+    padding: 60px 70px;
+    transition: .3s all;
+    font-size: 42px;
+    position: relative;
+    margin-top: -9px;
+    font-family: 'Kaushan Script';
+}
+
+.contact-title p::before {
+    content: "CONTACT";
+    position: absolute;
+    z-index: -1;
+    position: absolute;
+    color: #efefef;
+    left: 65px;
+    top: 75px;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 14px;
+    padding: .5rem .75rem;
+    margin-bottom: 20px;
+    outline: none;
+    line-height: 1.25;
+    width: 80%;
+}
+
+.textarea {
+    border: none;
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+    line-height: 1.25;
+    width: 95%;
+    height: 100px;
+    resize: none;
+    padding-left: 25px;
+    margin-top: 15px;
+
+}
+
+.form input::placeholder,
+textarea::placeholder {
+    opacity: 0.7;
+    color: #495057;
+}
+
+textarea::placeholder {
+    padding-left: 19px;
+}
+
+.btn-submit {
+    margin-left: 25px;
+    margin-top: 15px;
+    width: 180px;
+    height: 45px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 50px;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+.contact-info {
+    width: 100%;
+
+    background: linear-gradient(to right, #9f8348 0%, #caa75d 100%);
+    box-shadow: -3px 6px 23px rgba(144, 144, 144, 0.46);
+    border-radius: 4px;
+    color: white;
+    padding: 50px;
+}
+
+.reva {
+    position: absolute;
+    right: 20px;
+    top: 42px;
+    font-size: 125px;
+    transform: rotate(38deg);
+    color: rgba(255, 255, 255, 0.11);
+    font-weight: 100;
+    font-family: 'Kaushan Script', sans-serif;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: white;
+}
+
+.icons {
+    margin-right: 15px;
+}
+
+.address {
+    display: flex;
+}
+
+.contact-info div {
+    padding: 18px 20px;
+}
+
+.open-map,.close-map {
+    width: 100%;
+    height: 5vh !important;
+    background-color: var(--primary-color);
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    margin-top: 50px;
+    transition: .5s all !important;
+}
+
+.map{
+    transition: .5s all !important;
+}
+.map-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    height: 5vh;
+}
+
+.map-text i {
+    margin-right: 5px;
+}
+
+.map-overlay {
+    filter: gray;
+    -webkit-filter: grayscale(99%);
+    height: 0;
+    overflow: hidden;
+    transition: .5s all;
+
+}
+
+.contact-bottom {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+
+.bouthythemes {
+    color: var(--primary-color);
+    font-style: italic;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
+@media screen and (max-width: 991px) {
+    .navbar {
+
+        left: -220px;
+        transition: 0.3s;
+
+    }
+
+
+    .slider {
+        width: 100% !important;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .about {
+        width: 100% !important;
+        margin-left: 55px;
+
+    }
+
+    .acc-header {
+        margin-top: 20px !important;
+    }
+
+    .about-image img {
+        width: 100% !important;
+    }
+
+
+
+    .services {
+        width: 100% !important;
+    }
+
+    .services-video {
+        height: 260px;
+        margin-bottom: 15px;
+    }
+
+    .portfolio1 {
+        width: 100% !important;
+    }
+
+    .overlay-portfolio {
+        height: 87%;
+    }
+
+    .portfolio-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 27px;
+
+    }
+
+    .testimonials {
+        width: 100% !important;
+    
+    }
+
+    .testimonials-text {
+        width: 90%;
+
+    }
+
+    .testimonials-title {
+        padding: 70px 30px !important;
+    }
+
+    .testimonials-bottom {
+        height: 300px;
+    }
+
+    .contact {
+        width: 100% !important;
+    }
+
+    .open-map {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        left: 0px !important;
+    }
+
+}
+
+/*  */
+
+
+/* Plugin */
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
